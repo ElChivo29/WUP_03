@@ -50,12 +50,24 @@ this box plot shows the amount of alcohol consumed by the seating position.  The
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
-The graph shows the amount of alcohol consumed based on where you sit. The back seat people consume more alcohol than the people who sit in the front and middle. the middle consumes more than the people who sit in the front.
+The graph shows the amount of alcohol consumed based on where you sit. The back seat people consume more alcohol than the people who sit in the front and middle. the middle consumes more than the people who sit in the front. 
 
 ## Numerical Summarys 
 
+```{r}
+
+```
+
+
 ## Inferential Tests
 
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+this data shows the mean and the median. it also shows how they drink by each quarter. The people in the back drink way more than the people in the front and middle 
+
 ## Conclusions
+
+
 
 
