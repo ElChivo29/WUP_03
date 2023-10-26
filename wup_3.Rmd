@@ -1,7 +1,7 @@
 ---
 title: "Alcohol vs Seat choice"
 author: "David Santana"
-date: "Fall 2020"
+date: "Fall 2023"
 output: html_document
 ---
 
@@ -55,18 +55,34 @@ The graph shows the amount of alcohol consumed based on where you sit. The back 
 ## Numerical Summarys 
 
 ```{r}
-
+favstats(alcohol~Seat,data=davisdata)
 ```
 
+this data shows the mean and the median of alcohol consumed.  it also shows how they drink each quarter. the people in the back drink way more than the people in the front and middle.
 
 ## Inferential Tests
 
 ```{r}
-favstats(alcohol~Seat,data=davisdata)
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
 ```
-this data shows the mean and the median. it also shows how they drink by each quarter. The people in the back drink way more than the people in the front and middle 
+the p value is 0.000116 which is less than 0.5. the p value is smaller so therefore we reject the null hypothesis. this means that there is a difference in alcohol consumption based on where they sit.
 
-## Conclusions
+```{r}
+plot(TukeyHSD(model1))
+```
+
+we don't have evidence that there is a difference in the alcohol consumption between the middle and front rows. the only difference we found is the back row consumes more than the middle and front row.
+
+
+
+
+# conclusion
+
+is there a difference between the alcohol consumed between the row you choose to sit in? Yes there is a difference between the alcohol consumed by the row you sit in. based on the data the back row consumes more alcohol than the people who sit in the front and middle row. the p is 0.000116, which is smaller than 0.5, i will reject the null hypothesis.
+
+
+
 
 
 
