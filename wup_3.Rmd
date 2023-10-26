@@ -1,6 +1,6 @@
 ---
 title: "Alcohol vs Seat choice"
-author: "Your Name"
+author: "David Santana"
 date: "Fall 2020"
 output: html_document
 ---
@@ -16,6 +16,12 @@ davisdata <- read.csv(file="UCDavis.csv")
 ```
 ## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row
 ## you choose to sit in??
+
+# introduction
+
+$H_0$: There is no difference in the alcohol consumed based on the row you sit on.
+
+$H_A$: There is a difference in the alcohol consumed based on the row you sit on.
 
 ## Now with ggplot - first select the basic data
 
